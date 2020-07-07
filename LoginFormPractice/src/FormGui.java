@@ -73,10 +73,7 @@ public class FormGui implements ActionListener {
 		up.add(user + " , " + password);
 
 		if (e.getSource() == registerButton) {
-			userTextField.setText("");
-			passwordTextField.setText("");
-			successLabel.setText("");
-			passTooShortLabel.setText("");
+			resetFields();
 			
 			if (password.length() < 5) {
 				passTooShortLabel.setText("Password should be at least 5 characters long.");
@@ -89,10 +86,7 @@ public class FormGui implements ActionListener {
 		}
 
 		if (e.getSource() == loginButton) {
-			userTextField.setText("");
-			passwordTextField.setText("");
-			successLabel.setText("");
-			passTooShortLabel.setText("");
+			resetFields();
 			
 			if (users.checker(up) != true) {
 				successLabel.setText("Invalid password!");
@@ -102,5 +96,10 @@ public class FormGui implements ActionListener {
 
 		}
 	}
-
+	public static void resetFields() {
+		userTextField.setText("");
+		passwordTextField.setText("");
+		successLabel.setText("");
+		passTooShortLabel.setText("");
+	}
 }

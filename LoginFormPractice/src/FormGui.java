@@ -73,6 +73,8 @@ public class FormGui implements ActionListener {
 		up.add(user + " , " + password);
 
 		if (e.getSource() == registerButton) {
+			userTextField.setText("");
+			passwordTextField.setText("");
 			successLabel.setText("");
 			passTooShortLabel.setText("");
 			
@@ -87,6 +89,8 @@ public class FormGui implements ActionListener {
 		}
 
 		if (e.getSource() == loginButton) {
+			userTextField.setText("");
+			passwordTextField.setText("");
 			successLabel.setText("");
 			passTooShortLabel.setText("");
 			

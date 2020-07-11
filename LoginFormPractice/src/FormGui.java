@@ -75,8 +75,8 @@ public class FormGui implements ActionListener {
 		if (e.getSource() == registerButton) {
 			resetFields();
 			
-			if (password.length() < 5) {
-				passTooShortLabel.setText("Password should be at least 5 characters long.");
+			if (password.length() < 5 || user.length() < 5) {
+				passTooShortLabel.setText("Fields should be at least 5 characters long.");
 			} else {
 				users.addUser(up);
 				successLabel.setText("Registration successful.");
